@@ -146,6 +146,7 @@ class UNet_3D(Module):
         
         # 4 * 16 * 16
         output = self.t_cov3d_9(output5)
+        print(f"output: {output.shape} output4: {output4.shape}")
         output = torch.cat((output, output4), dim = 1)
         output = self.cov3d_91_(output)
         output = self.bn_91(output)
