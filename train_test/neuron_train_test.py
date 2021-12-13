@@ -141,9 +141,6 @@ class Train_Test_Process():
         #for test_loader in [self.test_data_loader_0, self.test_data_loader_1]:
         for test_loader in [self.test_data_loader_0,]:
             start = datetime.now()
-            right_number = 0
-            size_sum = 0
-            loss_total = 0.0
             self.net.eval()
             length = len(test_loader)
             for index, (test_image, test_label) in enumerate(test_loader):

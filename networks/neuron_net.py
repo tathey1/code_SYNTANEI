@@ -108,7 +108,6 @@ class UNet_3D(Module):
         output = self.bn_12(output)
         output1 = self.relu_12(output)
         output = self.maxpool_1(output1)
-        print(f"outputshape: {output.shape}")
 
         # 16 * 64 * 64
         output = self.cov3d_21(output)
@@ -118,7 +117,6 @@ class UNet_3D(Module):
         output = self.bn_22(output)
         output2 = self.relu_22(output)
         output = self.maxpool_2(output2)
-        print(f"outputshape: {output.shape}")
         
         # 8 * 32 * 32
         output = self.cov3d_31(output)
@@ -128,7 +126,6 @@ class UNet_3D(Module):
         output = self.bn_32(output)
         output3 = self.relu_32(output)
         output = self.maxpool_3(output3)
-        print(f"outputshape: {output.shape}")
 
         # 4 * 16 * 16
         output = self.cov3d_41(output)
@@ -137,7 +134,6 @@ class UNet_3D(Module):
         output = self.cov3d_42(output)
         output = self.bn_42(output)
         output4 = self.relu_42(output)
-        print(f"output shape: {output.shape} to output4 shape: {output4.shape}")
         output = self.maxpool_4(output4)
 
         output = self.con3d_51(output)
@@ -150,9 +146,6 @@ class UNet_3D(Module):
         
         # 4 * 16 * 16
         output = self.t_cov3d_9(output5)
-        print(f"output5 shape {output5.shape} to output shape: {output.shape}")
-        print(f"outputshape: {output.shape}")
-        print(f"output4shape: {output4.shape}")
         output = torch.cat((output, output4), dim = 1)
         output = self.cov3d_91_(output)
         output = self.bn_91(output)
