@@ -158,16 +158,6 @@ class Train_Test_Process():
                 output0 = self.net.forward(test_image)
                 print(output0.shape)
                 torch.save(output0, "/cis/home/tathey/projects/mouselight/li_deep/DATA/output/output0.pt")
-                cls.printing()
-                stop_1 = datetime.now()
-                text = 'test_loss = {:.6f} / {:.6f}, acc = {:.6f}, took {} hours'.format(-1,-1, -1, stop_1 - start_1)
-                self.printer.pprint('testing - ' + text)
-                self.printer.pprint(' ')
-
-                right_number += cls.right_size
-                size_sum += cls.size
-            self.printer.pprint('testing totally ---- ')
-            cls.printing_()
             stop = datetime.now()
             text = 'testing - acc = {},  took {} hours'.format(right_number / size_sum, stop - start)
             self.printer.pprint(text = text)
