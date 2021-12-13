@@ -203,7 +203,7 @@ class Train_Test_Process():
                 size_sum += cls.size
 
 
-                torch.save(output0, "/cis/home/tathey/projects/mouselight/li_deep/DATA/output/output" + index + ".pt")
+                torch.save(output0, "/cis/home/tathey/projects/mouselight/li_deep/DATA/output/output_idx_" + index + ".pt")
             self.printer.pprint('testing totally ---- ')
             cls.printing_()
             stop = datetime.now()
