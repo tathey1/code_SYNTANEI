@@ -53,7 +53,8 @@ ARGS['loss_weight_mse'] = 0.0                       # 损失函数中欧氏距�
 ARGS['weight_decay'] = 1e-4                         # 损失函数中正则项系数，权重衰减系数
 ARGS['FL_gamma'] = 0.0000
 
-ARGS['load_model'] = "/cis/home/tathey/projects/mouselight/li_deep/weights_model/neuron_segmentation/neuron_segmentation_epoch_040.pkl"
+ARGS['load_model'] = '/cis/home/tathey/projects/mouselight/li_deep/Model_info/Model_4/neuron_segmentation_U_63/neuron_segmentation_U_63_epoch_150.pkl'
+#"/cis/home/tathey/projects/mouselight/li_deep/weights_model/neuron_segmentation/neuron_segmentation_epoch_040.pkl"
 #'/cis/home/tathey/projects/mouselight/li_deep/Model_info/Model_4/neuron_segmentation_U_63/neuron_segmentation_U_63_epoch_150.pkl'
 
                                                     # 已经预训练的权重文件
