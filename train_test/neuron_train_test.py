@@ -159,7 +159,7 @@ class Train_Test_Process():
                 print(output0.shape)
                 torch.save(output0, "/cis/home/tathey/projects/mouselight/li_deep/DATA/output/output0.pt")
             stop = datetime.now()
-            text = 'testing - acc = {},  took {} hours'.format(right_number / size_sum, stop - start)
+            text = 'testing  took {} hours'.format(stop - start)
             self.printer.pprint(text = text)
         self.net.train()
 
